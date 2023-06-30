@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Manrope', sans-serif; */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html{
+    
+    --color1:#fff;
+    --color2: #fff;
+    --color3:#fff;
+    background: var(--color1);
+    background: #333;
+
+}
+body{
+    position: relative;
+}
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./pictures/header2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100vw;
+    height: 90vh;
+    /* max-height: 8px; */
+    position: relative;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    min-height: 40px;
+    max-height: 70px;
+    width: 100vw;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 999;
+}
+.nav-items{
+    display: flex;
+    list-style-type: none;
+    color: var(--color2);
+    width:70vw;
+    max-width: 700px;
+    justify-content: space-around;
+    margin-right: 1rem;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+/* chat gpt link effect */
+.item a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 2px;
+}
+.item a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+}
+.item a:hover::before {
+    width: 100%;
+}
+
+
+.logo{
+    color: var(--color2);
+    margin-left: 2rem;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    cursor:  pointer;
+}
+.landing-content{
+    max-width: 900px;
+    width: 60vw;
+    max-height: 700px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    margin-left: 4rem;
+    transform: translateY(-50%);
+}
+
+
+.landing-content p.greeting{
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    color: #ddd;
+    letter-spacing: 3px;
+    background: rgba(0,0,0,0.5);
+    text-transform: capitalize;
+}
+.skill,.name{
+    font-size: 4vw;
+    text-transform: capitalize;
+    margin-bottom: 2.5rem;
+    color: #fff;
+}
+.name{
+    margin: 0 0 -1rem 0;
+}
+.landing-content p{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin-bottom: 2.5rem;
+    color: #ddd;
+
+}
+.btn{
+    width: 9rem;
+    height: 2.6rem;
+    border-radius: 5px;
+    background: none;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color2);
+    transition: 0.2s ease-in-out;
+}
+.landing-content button:hover{
+    background: white;
+    color: black;
+    border: 2px solid white;
+}
+
+
+
+/* ============= 2nd page ==================== */
+
+
+section.about{
+    background: #fff;
+    position: relative;
+    width:auto;
+    width: 100vw;
+    height: 90vh;
+}
+.content{
+    /* border: 5px solid green; */
+    height: 80%;
+    width: 70%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-flow: row;
+    flex-direction: row;
+}
+
+.common-heading{
+    position: relative;
+    height: 10vh;
+    width: 300px;
+    margin-bottom: 3rem;
+}
+.common-heading h2{
+    position: absolute;
+    font-size: 6vw;
+    top: 50%;
+    font-family: 'Manrope', sans-serif;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+    opacity: 0.05;
+    margin-left: 0.5rem;
+}
+.common-heading p{
+    background: #fff;
+    color: #666;
+    display: inline-block;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    text-transform: capitalize;
+
+}
+
+
+
+
+
+.content .about-content{
+    width: 58%;
+}
+.content div.about-content p{
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #666;
+}
+.content div.about-content button{
+    color: #666;
+    width: auto;
+    padding: 0 0.5rem;
+    margin:3rem 0 0 0.5rem;
+    border: 2px solid #666;
+    border-radius: 0;
+}
+.content div.about-content button:hover{
+    background: #000;
+    color: #ddd;
+}
+
+
+
+
+.skills-levels{
+    /* border: 2px solid rebeccapurple; */
+    width: 40%;
+}
+.skills-levels *{
+    margin-left: 0.5rem;
+}
+
+
+
+.skills-levels .skill{
+    width: auto;
+    height:auto;
+    /* border:4px solid green; */
+    margin-top: 8rem;
+}
+.skills-levels .skill p{
+    color: #666;
+    font-size: 1rem;
+    margin-bottom:-3.5rem ;
+}
+
+
+span{
+    display: inline-block;
+    width: 80%;
+    height: 4px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+span.filled {
+    display: block;
+    height: 100%;
+    margin: 0;
+    background-color: #666;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+
+
+
+/*  ============== projects css ============== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================== Qoute of the day ============== */
+.quote-page {
+    max-height: 80vh;
+    height: 500px;
+    position: relative;
+    background-color: #222;
+    color: #eee;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./pictures/pexels-photo-7054785.jpeg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+.quote-content{
+    height: 80%;
+    height: auto;
+    width: 70%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div.quote-div{
+    border: 2px solid red;
+}
+.quotation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20rem;
+    z-index: -3;
+    opacity: 0.05;
+
+}
+.main-quote{
+    text-align: center;
+    font-size: 3rem;
+    color: #ddd;
+    text-align: center;
+}
+.author{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    color: #ddd;
+    padding-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:775px) {
+    html{
+        font-size: 10px;
+    }
+    div.content{
+        flex-flow: column;
+        flex-wrap: nowrap;
+    }
+}
