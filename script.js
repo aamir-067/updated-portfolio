@@ -29,3 +29,10 @@ fetch("https://type.fit/api/quotes")
     });
     updateQuote(quotes);
 });
+
+
+
+
+// test =======
+const btn = document.querySelector(".btn-second");
+console.log(btn.style);

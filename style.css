@@ -18,7 +18,7 @@ html{
     --color2: #fff;
     --color3:#fff;
     background: var(--color1);
-    background: #333;
+    /* background: #333; */
 
 }
 body{
@@ -61,14 +61,14 @@ header{
 }
 
 /* chat gpt link effect */
-.item a{
+.item a, div.project-content a{
     position: relative;
     display: inline-block;
     text-decoration: none;
     color: #fff;
     padding: 2px;
 }
-.item a::before {
+.item a::before, div.project-content a::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -78,7 +78,7 @@ header{
     background-color: #fff;
     transition: width 0.3s ease-in-out;
 }
-.item a:hover::before {
+.item a:hover::before, div.project-content a:hover::before{
     width: 100%;
 }
 
@@ -107,14 +107,13 @@ header{
     display: inline-block;
     margin-bottom: 2.5rem;
     padding: 0.4rem 1rem;
-    border-radius: 5px;
     color: #ddd;
     letter-spacing: 3px;
-    background: rgba(0,0,0,0.5);
+    background: #333;
     text-transform: capitalize;
 }
 .skill,.name{
-    font-size: 4vw;
+    font-size: 4.5rem;
     text-transform: capitalize;
     margin-bottom: 2.5rem;
     color: #fff;
@@ -132,18 +131,17 @@ header{
 .btn{
     width: 9rem;
     height: 2.6rem;
-    border-radius: 5px;
     background: none;
     border: 2px solid #ddd;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color2);
+    color: #fff;
     transition: 0.2s ease-in-out;
 }
 .landing-content button:hover{
     background: white;
-    color: black;
+    color: #222;
     border: 2px solid white;
 }
 
@@ -157,7 +155,7 @@ section.about{
     position: relative;
     width:auto;
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
 }
 .content{
     /* border: 5px solid green; */
@@ -173,7 +171,6 @@ section.about{
     flex-flow: row;
     flex-direction: row;
 }
-
 .common-heading{
     position: relative;
     height: 10vh;
@@ -182,13 +179,13 @@ section.about{
 }
 .common-heading h2{
     position: absolute;
-    font-size: 6vw;
+    font-size: 7rem;
     top: 50%;
     font-family: 'Manrope', sans-serif;
     left: 50%;
     transform: translate(-50%, -50%);
     letter-spacing: 2px;
-    opacity: 0.05;
+    opacity: 0.1;
     margin-left: 0.5rem;
 }
 .common-heading p{
@@ -202,10 +199,6 @@ section.about{
     text-transform: capitalize;
 
 }
-
-
-
-
 
 .content .about-content{
     width: 58%;
@@ -234,7 +227,6 @@ section.about{
 
 
 .skills-levels{
-    /* border: 2px solid rebeccapurple; */
     width: 40%;
 }
 .skills-levels *{
@@ -246,7 +238,6 @@ section.about{
 .skills-levels .skill{
     width: auto;
     height:auto;
-    /* border:4px solid green; */
     margin-top: 8rem;
 }
 .skills-levels .skill p{
@@ -275,9 +266,88 @@ span.filled {
 
 
 
+div.about-content button.btn-second{
+    background-color: #000;
+    color: #ddd;
+    position: relative;
+    background-color: none;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+div.about-content button.btn-second i{
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+div.about-content button.btn-second:hover i{
+    transform: translate(0, -50%);
+    transform: translateX(30px);
+}
+
+
+
+
+
+
 
 /*  ============== projects css ============== */
+.projects-section{
+    max-height: 80vh;
+    height: 800px;
+    margin-bottom: 100px;
+    width: 100vw;
+    position: relative;
+}
+.projects{
+    margin-top: 5rem;
+    position: absolute;
+    width: 99%;
+    height: 70%;
+    /* border: 2px solid red; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* flex-flow: column; */
+}
+.projects .project{
+    box-shadow: 5px 10px 0.8rem rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 30%;
+    min-width: 250px;
+    height: 100%;
+    transition: ease-in-out 0.4s;
+}
+.projects .project:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+div.project-content{
+    box-shadow: none;
+    /* border: 3px solid white; */
+    position: absolute;
+    top: 80%;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    height: auto;
+    background: #000;
+}
+div.project-content p{
+    padding: 10px 20px 0 10px;
+    color: #fff;
+    font-size: 1.3rem;
 
+}
+div.project-content a{
+    margin-left: 30%;
+    text-transform: capitalize;
+}
 
 
 
@@ -297,11 +367,10 @@ span.filled {
     position: relative;
     background-color: #222;
     color: #eee;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./pictures/pexels-photo-7054785.jpeg");
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("./pictures/pexels-photo-7054785.jpeg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Arial, sans-serif;
 }
 .quote-content{
     height: 80%;
@@ -312,9 +381,6 @@ span.filled {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-div.quote-div{
-    border: 2px solid red;
-}
 .quotation{
     position: absolute;
     top: 50%;
@@ -322,7 +388,7 @@ div.quote-div{
     transform: translate(-50%, -50%);
     font-size: 20rem;
     z-index: -3;
-    opacity: 0.05;
+    opacity: 0.15;
 
 }
 .main-quote{
@@ -374,7 +440,7 @@ div.quote-div{
 
 
 
-
+/* 
 @media (max-width:775px) {
     html{
         font-size: 10px;
@@ -383,4 +449,4 @@ div.quote-div{
         flex-flow: column;
         flex-wrap: nowrap;
     }
-}
+} */
