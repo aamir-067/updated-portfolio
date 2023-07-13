@@ -1,3 +1,4 @@
+console.log("testing")
 // // for random quote and auther
 
 function updateQuote(quotes){
@@ -33,6 +34,3 @@ fetch("https://type.fit/api/quotes")
 
 
 
-// test =======
-const btn = document.querySelector(".btn-second");
-console.log(btn.style);
