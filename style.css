@@ -226,6 +226,7 @@ section.about {
 
 .skills-levels {
 	width: 40%;
+	margin: 5rem 0;
 }
 .skills-levels * {
 	margin-left: 0.5rem;
@@ -234,7 +235,7 @@ section.about {
 .skills-levels .skill {
 	width: auto;
 	height: auto;
-	margin-top: 8rem;
+	margin: 1rem 0;
 }
 .skills-levels .skill p {
 	color: #666;
@@ -505,8 +506,6 @@ div.project-content a {
 	border-radius: 3px;
 	box-sizing: border-box;
 	background-color: #1f2022;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 	border: none;
 	resize: none;
 
@@ -522,8 +521,7 @@ div.project-content a {
 .footer-distributed form textarea:focus {
 	outline: none;
 	border: none;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-		rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	box-shadow: rgba(0, 0, 0, 1) 0px 25px 20px -20px;
 }
 
 .footer-distributed ::-webkit-input-placeholder {
@@ -552,9 +550,17 @@ div.project-content a {
 .footer-distributed form button {
 	background-color: #33383b;
 	border: 0;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 	float: right;
+	cursor: pointer;
 }
-
+.footer-distributed form button:hover {
+	cursor: pointer;
+}
+.footer-distributed form button:active {
+	font-size: 1.2rem;
+}
 @media (max-width: 775px) {
 	html {
 		font-size: 10px;

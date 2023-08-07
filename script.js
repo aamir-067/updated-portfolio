@@ -1,26 +1,41 @@
-// // for random quote and auther
-
 function updateQuote(quotes) {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const randomIndex = Math.floor(Math.random() * 15);
     const randomQuote = quotes[randomIndex];
     const quoteTextElement = document.getElementById('quoteText');
     const quoteAuthorElement = document.getElementById('quoteAuthor');
     if (quoteTextElement && quoteAuthorElement) {
-        console.log(quoteAuthorElement, quoteTextElement);
         quoteTextElement.textContent = randomQuote.text;
-        quoteAuthorElement.textContent = randomQuote.author;
+        quoteAuthorElement.textContent = randomQuote.author.split(',')[0];
     }
 }
-async function fetchQuote() {
-    let res = await fetch("https://type.fit/api/quotes")
-    let quotes = await res.json();
-    console.log(quotes);
-    updateQuote(quotes);
 
-}
-window.onload = () => {
-    fetchQuote();
-}
+fetch("https://type.fit/api/quotes")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        const quotes = {};
+
+        data.forEach(function (quote, index) {
+            const text = quote.text;
+            const author = quote.author;
+
+            quotes[index] = {
+                text: text,
+                author: author
+            };
+        });
+        updateQuote(quotes);
+    });
+
+// fetch('https://zenquotes.io/api/random')
+//     .then((res) => {
+//         return res.json();
+//     }).then((data) => {
+//         console.log(data);
+//     }).catch((error) => {
+//         Error(error);
+//     });
 
 
 // code for projects section
