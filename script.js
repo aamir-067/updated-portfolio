@@ -1,34 +1,26 @@
-console.log("testing")
 // // for random quote and auther
 
 function updateQuote(quotes) {
-    const randomIndex = Math.floor(Math.random() * 1642);
+    const randomIndex = Math.floor(Math.random() * quotes.length);
     const randomQuote = quotes[randomIndex];
     const quoteTextElement = document.getElementById('quoteText');
     const quoteAuthorElement = document.getElementById('quoteAuthor');
     if (quoteTextElement && quoteAuthorElement) {
+        console.log(quoteAuthorElement, quoteTextElement);
         quoteTextElement.textContent = randomQuote.text;
         quoteAuthorElement.textContent = randomQuote.author;
     }
 }
-fetch("https://type.fit/api/quotes")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        const quotes = {};
+async function fetchQuote() {
+    let res = await fetch("https://type.fit/api/quotes")
+    let quotes = await res.json();
+    console.log(quotes);
+    updateQuote(quotes);
 
-        data.forEach(function (quote, index) {
-            const text = quote.text;
-            const author = quote.author;
-
-            quotes[index] = {
-                text: text,
-                author: author
-            };
-        });
-        updateQuote(quotes);
-    });
+}
+window.onload = () => {
+    fetchQuote();
+}
 
 
 // code for projects section
