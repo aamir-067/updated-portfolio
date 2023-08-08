@@ -1,3 +1,4 @@
+alert('🚧 Welcome! This portfolio is under construction. Exciting updates coming soon. Thank you for your patience. 🚧');
 function updateQuote(quotes) {
     const randomIndex = Math.floor(Math.random() * 15);
     const randomQuote = quotes[randomIndex];
@@ -27,16 +28,6 @@ fetch("https://type.fit/api/quotes")
         });
         updateQuote(quotes);
     });
-
-// fetch('https://zenquotes.io/api/random')
-//     .then((res) => {
-//         return res.json();
-//     }).then((data) => {
-//         console.log(data);
-//     }).catch((error) => {
-//         Error(error);
-//     });
-
 
 // code for projects section
 // vars
