@@ -1,4 +1,6 @@
-alert('🚧 Welcome! This portfolio is under construction. Exciting updates coming soon. Thank you for your patience. 🚧');
+alert('🚧 Welcome! This portfolio is outdated. you will redirected to latest one thanks for visit.');
+window.location.href = "https:/aamir.farvelo.com";
+
 function updateQuote(quotes) {
     const randomIndex = Math.floor(Math.random() * 15);
     const randomQuote = quotes[randomIndex];
