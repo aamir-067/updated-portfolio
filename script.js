@@ -1,5 +1,5 @@
 alert('🚧 Welcome! This portfolio is outdated. you will redirected to latest one thanks for visit.');
-window.location.href = "https:/aamir.farvelo.com";
+window.location.href = "https://aamir.farvelo.com";
 
 function updateQuote(quotes) {
     const randomIndex = Math.floor(Math.random() * 15);
